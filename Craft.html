@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry- online</title>
+    <link rel="stylesheet" href="Jewel-style.css">
+    <link script src="Jewel-script.js"></script>
+    <style>
+        body {
+      font-family: 'Roboto', sans-serif;
+      background: #faf7fc;
+      margin: 0;
+      padding: 0;
+    }
+    .craft-items {
+      max-width: 1300px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .craft-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .craft-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .craft-card {
+      background: white;
+      box-shadow: 0 6px 16px rgba(234, 87, 87, 0.983);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 0 24px;
+      transition: box-shadow 3s;
+      border: 2px solid #ededed;
+    }
+    .craft-card:hover {
+      box-shadow: 0 8px 24px rgba(166, 165, 165, 0.2);
+      border-color: #292828;
+    }
+    .craft-img {
+      width: 400px;
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 1px solid #f0eafc;
+    }
+    .craft-info {
+      width: 100%;
+      text-align: center;
+      padding: 14px 16px 0;
+      flex: 1;
+    }
+    .craft-name {
+      font-size: 1.13rem;
+      font-weight: 500;
+      margin: 6px 0;
+      color: #0f0f10;
+    }
+    .craft-prices {
+      margin: 6px 0 14px 0;
+      font-size: 1.3rem;
+      letter-spacing: 0.2px;
+    }
+    .craft-price {
+      color: #321c53;
+      font-weight: bold;
+      margin-right: 7px;
+    }
+    .craft-sale {
+      color: #e05267;
+      text-decoration: line-through;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+    .craft-btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 7px 22px;
+      font-size: 1rem;
+      font-weight: 500;
+      background: #fff;
+      color: #6b0b04;
+      border: 2px solid #0f0816;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+      letter-spacing: 1.2px;
+    }
+    .craft-btn:hover {
+      background: #ac0404;
+      color: #fff;
+    }
+    @media (max-width: 900px) {
+      .craft-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .craft-grid {
+        grid-template-columns: 1fr;
+      }
+      .craft-items {
+        padding: 4px;
+      }
+    }
+    </style>
+
+</head>
+<body>
+
+    <!-- Sales Announcement Bar -->
+<div class="sales-bar">
+  Unlock joy with extra discount on eGift card <a href="New-Arrivals.html">shop now</a>
+</div>
+
+<!-- Header Section -->
+<header class="main-header">
+  <div class="logo">
+      <img src="jewell_lg2-removebg-preview.png" alt="Jewelry Logo" class="logo-img">
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="Home.html">HOME</a></li>
+      <li><a href="New-Arrivals.html">NEW ARRIVALS</a></li>
+      <li><a href="Categories.html">CATEGORIES</a></li>
+      <li><a href="Bridal.html">BRIDAL</a></li>
+      <li><a href="Craft.html">CRAFT</a></li>
+      <li><a href="Contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div class="search-user">
+    <input type="text" placeholder="Search">
+    <button class="search-btn">&#128269;</button>
+    <span class="user-icon">&#9679;</span>
+  </div>
+</header>
+  
+  <div class="craft-items">
+    <div class="craft-title">Craft Items</div>
+    <div class="craft-grid">
+      <!-- Repeat this .craft-card block for each item -->
+      <div class="craft-card">
+        <img class="craft-img" src="craft5.jpg" alt="Handmade craft">
+        <div class="craft-info">
+          <div class="craft-name">Handmade craft</div>
+          <div class="craft-prices">
+            <span class="craft-price">₹ 888</span>
+            <span class="craft-sale">₹1250</span>
+          </div>
+          <button class="craft-btn">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="craft-card">
+        <img class="craft-img" src="polki-jewellery.jpg" alt="Dhokra Art Jewelry-Red Beads">
+        <div class="craft-info">
+          <div class="craft-name">Dhokra Art Jewelry-Red Beads</div>
+          <div class="craft-prices">
+            <span class="craft-price">₹ 888</span>
+            <span class="craft-sale">₹1250</span>
+          </div>
+          <button class="craft-btn">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="craft-card">
+        <img class="craft-img" src="teracotta-jewellery.jpg" alt="Dhokra Art Jewelry-Red Beads">
+        <div class="craft-info">
+          <div class="craft-name">Dhokra Art Jewelry-Red Beads</div>
+          <div class="craft-prices">
+            <span class="craft-price">₹ 888</span>
+            <span class="craft-sale">₹1250</span>
+          </div>
+          <button class="craft-btn">ADD TO CART</button>
+        </div>
+      </div>
+      <!-- Continue adding more cards below in the same format -->
+      <div class="craft-card">
+        <img class="craft-img" src="mirror-jewellery.jpg" alt="Handmade craft">
+        <div class="craft-info">
+          <div class="craft-name">Handmade craft</div>
+          <div class="craft-prices">
+            <span class="craft-price">₹ 888</span>
+            <span class="craft-sale">₹1250</span>
+          </div>
+          <button class="craft-btn">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="craft-card">
+        <img class="craft-img" src="fabric-jewellery.jpg" alt="Handmade craft">
+        <div class="craft-info">
+          <div class="craft-name">Handmade craft</div>
+          <div class="craft-prices">
+            <span class="craft-price">₹ 888</span>
+            <span class="craft-sale">₹1250</span>
+          </div>
+          <button class="craft-btn">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="craft-card">
+        <img class="craft-img" src="craft3.jpg" alt="Handmade craft">
+        <div class="craft-info">
+          <div class="craft-name">Handmade craft</div>
+          <div class="craft-prices">
+            <span class="craft-price">₹ 888</span>
+            <span class="craft-sale">₹1250</span>
+          </div>
+          <button class="craft-btn">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="craft-card">
+        <img class="craft-img" src="oxidized-jewellery.jpg" alt="Handmade craft">
+        <div class="craft-info">
+          <div class="craft-name">Handmade craft</div>
+          <div class="craft-prices">
+            <span class="craft-price">₹ 888</span>
+            <span class="craft-sale">₹1250</span>
+          </div>
+          <button class="craft-btn">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="craft-card">
+        <img class="craft-img" src="thewa-jewellery.jpg" alt="Handmade craft">
+        <div class="craft-info">
+          <div class="craft-name">Handmade craft</div>
+          <div class="craft-prices">
+            <span class="craft-price">₹ 888</span>
+            <span class="craft-sale">₹1250</span>
+          </div>
+          <button class="craft-btn">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="craft-card">
+        <img class="craft-img" src="craft4.jpg" alt="Handmade craft">
+        <div class="craft-info">
+          <div class="craft-name">Handmade craft</div>
+          <div class="craft-prices">
+            <span class="craft-price">₹ 888</span>
+            <span class="craft-sale">₹1250</span>
+          </div>
+          <button class="craft-btn">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="jewell_lg2-removebg-preview.png">
+            <div class="footer-icons-row">
+        <span class="footer-icon"><i class="fa fa-shield"></i></span>
+        <span class="footer-secure-text">100% SECURED<br>PAYMENT GATEWAY</span>
+        <span class="footer-icon"><i class="fa fa-globe"></i></span>
+        <span class="footer-intl-text">INTERNATIONAL<br>DELIVERY</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <div class="footer-heading">ONLINE SHOPPING</div>
+        <a href="Home.html">Home</a>
+        <a href="New-Arrivals.html">New Arrivals</a>
+        <a href="cartt.png">Categories</a>
+        <a href="Bridal.html">Bridal</a>
+        <a href="Craft.html">Craft</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div>
+        <div class="footer-heading">USEFUL LINKS</div>
+        <a href="#">T&C</a>
+        <a href="Cart.html">Shipping & Delivery</a>
+        <a href="#">Cancellation</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Return / Refunds</a>
+        <a href="Payment.html">Payments</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-heading">CONTACT US</div>
+      <div class="footer-contact-item">
+        <i class="fa fa-map-marker"></i> Manek Ratna<br>
+        3rd Floor, Block No. 304,<br>
+        Ryan Arcade, Zaveri Road, Malad (West),<br>
+        Maharashtra, Mumbai, Pincode: 400064
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-phone"></i> +91 8974388031
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-envelope"></i> info@manekratna.com
+      </div>
+      <div class="footer-social-row">
+        <span class="footer-social-label">Keep In Touch</span>
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <hr>
+    <div class="footer-bottom-text">
+      &copy; 2021-2025 www.Manekratna.Com All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for icons (include in <head> of your HTML) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<script>
+    // Array of items (replace images URLs with real ones as needed):
+const items = [
+    {title: 'Handmade craft', price: 888, oldPrice: 1250, img: 'img1.jpg'},
+    {title: 'Dhokra Art Jewelry-Red Beads', price: 888, oldPrice: 1250, img: 'img2.jpg'},
+    {title: 'Dhokra Art Jewelry-Red Beads', price: 888, oldPrice: 1250, img: 'img3.jpg'},
+    {title: 'Handmade craft', price: 888, oldPrice: 1250, img: 'img4.jpg'},
+    {title: 'Handmade craft', price: 888, oldPrice: 1250, img: 'img5.jpg'},
+    {title: 'Handmade craft', price: 888, oldPrice: 1250, img: 'img6.jpg'},
+    {title: 'Handmade craft', price: 888, oldPrice: 1250, img: 'img7.jpg'},
+    {title: 'Handmade craft', price: 888, oldPrice: 1250, img: 'img8.jpg'},
+    {title: 'Handmade craft', price: 888, oldPrice: 1250, img: 'img9.jpg'}
+];
+
+// Cart array
+let cart = [];
+
+function renderCards() {
+    const container = document.querySelector('.cards-container');
+    container.innerHTML = '';
+    items.forEach((item, idx) => {
+        container.innerHTML += `
+        <div class="card">
+            <img src="${item.img}" alt="${item.title}">
+            <div class="card-content">
+                <div>
+                    <div class="card-title">${item.title}</div>
+                    <div class="card-pricing">
+                        <span class="price-new">₹ ${item.price}</span>
+                        <span class="price-old">₹${item.oldPrice}</span>
+                    </div>
+                </div>
+                <button class="card-btn" onclick="addToCart(${idx})">ADD TO CART</button>
+            </div>
+        </div>
+        `;
+    });
+}
+function addToCart(idx) {
+    cart.push(items[idx]);
+    updateCartCount();
+    showCartModal();
+}
+function updateCartCount() {
+    document.getElementById('cart-count').textContent = cart.length;
+}
+function showCartModal() {
+    const modal = document.getElementById('cart-modal');
+    const list = document.getElementById('cart-list');
+    modal.style.display = 'block';
+    list.innerHTML = '';
+    cart.forEach((item, idx) => {
+        list.innerHTML += <li>${item.title} - ₹${item.price}</li>;
+    });
+}
+function closeCart() {
+    document.getElementById('cart-modal').style.display = 'none';
+}
+document.querySelector('.cart-icon').addEventListener('click', showCartModal);
+renderCards();
+</script>
+
+</body>
+</html>

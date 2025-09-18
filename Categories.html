@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry- online</title>
+    <link rel="stylesheet" href="Jewel-style.css">
+    <link script src="Jewel-script.js"></script>
+    <style>
+   body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .store-section {
+      display: flex;
+      margin: 20px auto;
+      max-width: 1300px;
+      gap: 24px;
+    }
+    .filter-panel {
+      min-width: 230px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 20px 16px;
+      height: fit-content;
+    }
+    .filter-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #740a09;
+    }
+    .filter-group {
+      margin-bottom: 18px;
+      border-bottom: 1px solid #e4e4e4;
+      padding-bottom: 12px;
+    }
+    .filter-group label {
+      display: block;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #343a40;
+      cursor: pointer;
+    }
+    .filter-group input[type="checkbox"] {
+      accent-color: #e2a828;
+      margin-right: 6px;
+    }
+    .category-panel {
+      flex: 1;
+    }
+    .category-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 7px;
+      margin-top: 8px;
+    }
+    .category-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #592704;
+    }
+    .sort-dropdown {
+      padding: 7px 11px;
+      border-radius: 6px;
+      border: 1px solid #ececec;
+      background: #fff;
+      font-size: 14px;
+      color: #592704;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+      gap: 19px;
+      margin-top: 18px;
+    }
+    .product-card {
+      background: #fff;
+      border: 1px solid rgba(70, 8, 4, 0.15);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(70,8,4,0.09);
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s;
+    }
+    .product-card:hover {
+      box-shadow: 0 4px 12px rgba(70,8,4,0.19);
+      border-color: #e2a828;
+    }
+    .product-image-area {
+      background: #f7f7f7;
+      padding: 18px;
+      text-align: center;
+    }
+    .product-image-area img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 7px;
+      object-fit: cover;
+      height: 400px;
+    }
+    .product-details {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #650b07;
+      margin-bottom: 3px;
+      min-height: 38px;
+      text-align: center;
+    }
+    .product-price {
+      font-size: 15px;
+      color: #e2a828;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .product-discount {
+      font-size: 13px;
+      color: #949494;
+      text-decoration: line-through;
+      margin-left: 4px;
+      font-weight: 400;
+    }
+    .product-action {
+      margin-top: 9px;
+      text-align: left;
+    }
+    .add-to-cart-btn {
+      background: #e2a828;
+      color: #fff;
+      border-radius: 6px;
+      border: none;
+      padding: 9px 22px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .add-to-cart-btn:hover {
+      background: #c18f1d;
+    }
+    @media (max-width: 850px) {
+      .store-section {
+        flex-direction: column;
+      }
+      .filter-panel {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Sales Announcement Bar -->
+<div class="sales-bar">
+  Unlock joy with extra discount on eGift card <a href="New-Arrivals.html">shop now</a>
+</div>
+
+<!-- Header Section -->
+<header class="main-header">
+  <div class="logo">
+      <img src="jewell_lg2-removebg-preview.png" alt="Jewelry Logo" class="logo-img">
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="Home.html">HOME</a></li>
+      <li><a href="New-Arrivals.html">NEW ARRIVALS</a></li>
+      <li><a href="Categories.html">CATEGORIES</a></li>
+      <li><a href="Bridal.html">BRIDAL</a></li>
+      <li><a href="Craft.html">CRAFT</a></li>
+      <li><a href="Contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div class="search-user">
+    <input type="text" placeholder="Search">
+    <button class="search-btn">&#128269;</button>
+    <span class="user-icon">&#9679;</span>
+  </div>
+</header>
+
+
+  
+ 
+  <div class="store-section">
+    <aside class="filter-panel">
+      <div class="filter-title">Filters</div>
+      <div class="filter-group">
+        <label><input type="checkbox" />Exclude Out of Stock</label>
+        <label><input type="checkbox" />Only Bulk Products</label>
+      </div>
+      <div class="filter-group">
+        <div class="filter-title" style="font-size:15px;">Tags</div>
+        <label><input type="checkbox" />Designer</label>
+        <label><input type="checkbox" />Gift Piece</label>
+        <label><input type="checkbox" />South Style</label>
+        <label><input type="checkbox" />North Style</label>
+        <label><input type="checkbox" />Fancy</label>
+        <label><input type="checkbox" />Rich Design</label>
+        <label><input type="checkbox" />Plain Gold</label>
+      </div>
+      <div class="filter-group">
+        <div class="filter-title" style="font-size:15px;">Color</div>
+        <label><input type="checkbox" />BROWN</label>
+        <label><input type="checkbox" />FIZZA</label>
+        <label><input type="checkbox" />PINK</label>
+        <label><input type="checkbox" />PURPLE GREEN</label>
+        <label><input type="checkbox" />AQUA</label>
+        <label><input type="checkbox" />MANA GREEN</label>
+      </div>
+      <div class="filter-group">
+        <div class="filter-title" style="font-size:15px;">Plating</div>
+        <label><input type="checkbox" />High Gold</label>
+        <label><input type="checkbox" />Gold and Silver</label>
+        <label><input type="checkbox" />Oxidized Silver</label>
+        <label><input type="checkbox" />Mehendi Plating</label>
+        <label><input type="checkbox" />Black Rodium</label>
+        <label><input type="checkbox" />Rose Gold</label>
+      </div>
+    </aside>
+
+    <main class="category-panel">
+      <div class="category-header">
+        <div class="category-title">Categories</div>
+        <select class="sort-dropdown">
+          <option>Sort by: What's New</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+        </select>
+      </div>
+      <div class="product-grid">
+        <!-- Product Cards (repeat for each product) -->
+        <div class="product-card">
+          <div class="product-image-area">
+            <img src="JADAU-TEMPLE-NECKLACE-SET-NS-17550RG-345-MA.jpg" alt="Jewelry 1">
+          </div>
+          <div class="product-details">
+            <div class="product-title">Bridal Temple Necklace Set Mat...</div>
+            <div>
+              <span class="product-price">₹224888</span>
+              <span class="product-discount">₹445250</span>
+            </div>
+            <div class="product-action">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image-area">
+            <img src="KUNDAN-SHDERVANI-MALA-SET-MS-966GR-838-RM.jpg" alt="Jewelry 2">
+          </div>
+          <div class="product-details">
+            <div class="product-title">Dhokra Art Jewelry-Red Beads</div>
+            <div>
+              <span class="product-price">₹888</span>
+              <span class="product-discount">₹1250</span>
+            </div>
+            <div class="product-action">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+          <div class="product-card">
+          <div class="product-image-area">
+            <img src="TEMPLE-EARRING-ER-16585PK-70-BD.jpg" alt="Jewelry 3">
+          </div>
+          <div class="product-details">
+            <div class="product-title">Handmade Craft</div>
+            <div>
+              <span class="product-price">₹224888</span>
+              <span class="product-discount">₹445250</span>
+            </div>
+            <div class="product-action">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image-area">
+            <img src="TEMPLE-EARRING-ER-16584MTGR-77-BD.jpg" alt="Jewelry 4">
+          </div>
+          <div class="product-details">
+            <div class="product-title">Handmade Craft</div>
+            <div>
+              <span class="product-price">₹888</span>
+              <span class="product-discount">₹1250</span>
+            </div>
+            <div class="product-action">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div> <div class="product-card">
+          <div class="product-image-area">
+            <img src="RADHA-KRISHNA-SINDOOR-BOX-KK-313RG-318-OM-6-QTY-2.jpg" alt="Jewelry 5">
+          </div>
+          <div class="product-details">
+            <div class="product-title">Handmade Craft</div>
+            <div>
+              <span class="product-price">₹23450</span>
+              <span class="product-discount">₹28330</span>
+            </div>
+            <div class="product-action">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image-area">
+            <img src="TEMPLE-SINDOOR-BOX-KK-299RG-160-OM-6-QTY-2.jpg" alt="Jewelry 6">
+          </div>
+          <div class="product-details">
+            <div class="product-title">Temple style Sindoor Box</div>
+            <div>
+              <span class="product-price">₹2073</span>
+              <span class="product-discount">₹4450</span>
+            </div>
+            <div class="product-action">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div> <div class="product-card">
+          <div class="product-image-area">
+            <img src="TEMPLE--BANGELS-BG-2778RG-75-YY-12-QTY-2.jpg" alt="Jewelry 7">
+          </div>
+          <div class="product-details">
+            <div class="product-title">Temple Bangles</div>
+            <div>
+              <span class="product-price">₹23450</span>
+              <span class="product-discount">₹28330</span>
+            </div>
+            <div class="product-action">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image-area">
+            <img src="TEMPLE-COMBO-NECKLACE-SET-NS-17092GO-580-OM-12-QTY-2.jpg" alt="Jewelry 8">
+          </div>
+          <div class="product-details">
+            <div class="product-title">Bridal Temple Necklace Set Mat...</div>
+            <div>
+              <span class="product-price">₹357300</span>
+              <span class="product-discount">₹404525</span>
+            </div>
+            <div class="product-action">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div> <div class="product-card">
+          <div class="product-image-area">
+            <img src="MARBLE-NECKLACE-SET--NS-16478MU-304-HA.jpg" alt="Jewelry 9">
+          </div>
+          <div class="product-details">
+            <div class="product-title">Handmade Marble Necklace</div>
+            <div>
+              <span class="product-price">₹23450</span>
+              <span class="product-discount">₹28330</span>
+            </div>
+            <div class="product-action">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image-area">
+            <img src="TEMPLE-PENDANT-SET-PS-4123RG-385-LS-6-QTY-2.jpg" alt="Jewelry 2">
+          </div>
+          <div class="product-details">
+            <div class="product-title">Bridal Pearl Beads Jewelry</div>
+            <div>
+              <span class="product-price">₹387300</span>
+              <span class="product-discount">₹445250</span>
+            </div>
+            <div class="product-action">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+    </main>
+  </div>
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="jewell_lg2-removebg-preview.png">
+            <div class="footer-icons-row">
+        <span class="footer-icon"><i class="fa fa-shield"></i></span>
+        <span class="footer-secure-text">100% SECURED<br>PAYMENT GATEWAY</span>
+        <span class="footer-icon"><i class="fa fa-globe"></i></span>
+        <span class="footer-intl-text">INTERNATIONAL<br>DELIVERY</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <div class="footer-heading">ONLINE SHOPPING</div>
+        <a href="Home.html">Home</a>
+        <a href="New-Arrivals.html">New Arrivals</a>
+        <a href="cartt.png">Categories</a>
+        <a href="Bridal.html">Bridal</a>
+        <a href="Craft.html">Craft</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div>
+        <div class="footer-heading">USEFUL LINKS</div>
+        <a href="#">T&C</a>
+        <a href="Cart.html">Shipping & Delivery</a>
+        <a href="#">Cancellation</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Return / Refunds</a>
+        <a href="Payment.html">Payments</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-heading">CONTACT US</div>
+      <div class="footer-contact-item">
+        <i class="fa fa-map-marker"></i> Manek Ratna<br>
+        3rd Floor, Block No. 304,<br>
+        Ryan Arcade, Zaveri Road, Malad (West),<br>
+        Maharashtra, Mumbai, Pincode: 400064
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-phone"></i> +91 8974388031
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-envelope"></i> info@manekratna.com
+      </div>
+      <div class="footer-social-row">
+        <span class="footer-social-label">Keep In Touch</span>
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <hr>
+    <div class="footer-bottom-text">
+      &copy; 2021-2025 www.Manekratna.Com All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for icons (include in <head> of your HTML) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">

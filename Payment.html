@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry- online</title>
+    <link rel="stylesheet" href="Jewel-style.css">
+    <link script src="Jewel-script.js"></script>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.payment-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.payment-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.payment-header h2 {
+    color: #0f0f10;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.progress-line {
+    position: relative;
+    height: 4px;
+    background: #ca5757;
+    border-radius: 2px;
+    margin: 0 50px;
+}
+
+.progress-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #990603;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(90, 79, 207, 0.3);
+}
+
+.form-section {
+    margin-bottom: 25px;
+}
+
+.form-section h3 {
+    color: #121111;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.full-width-input, .shipping-input {
+    width: 50%;
+    padding: 12px 15px;
+    border: 2px solid #383636;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.full-width-input:focus, .shipping-input:focus {
+    outline: none;
+    border-color: #850806;
+    box-shadow: 0 0 0 3px rgba(90, 79, 207, 0.1);
+    background: white;
+}
+
+.name-row, .address-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.half-width-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #1c1c1c;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.third-width-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #181616;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.half-width-input:focus, .third-width-input:focus {
+    outline: none;
+    border-color: #151419;
+    box-shadow: 0 0 0 3px rgba(90, 79, 207, 0.1);
+    background: white;
+}
+
+.shipping-input {
+    background: #f8f9fa;
+    color: #1b1919;
+}
+
+.security-text {
+    color: #322f2f;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.payment-options {
+    background: #d85151;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    position: relative;
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 12px;
+    accent-color: #b70606;
+    transform: scale(1.2);
+}
+
+.payment-option label {
+    flex: 1;
+    font-size: 18px;
+    color:black;
+    cursor: pointer;
+}
+
+.payment-option.selected {
+    background:transparent;
+    border-radius: 8px;
+    margin: -5px -10px;
+    padding: 12px 10px;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.payment-icons img {
+    height: 50px;
+    width: 60px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pay-now-btn {
+    width: 100%;
+    background:rgb(162, 6, 6);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pay-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(239, 123, 96, 0.918);
+}
+
+.pay-now-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment-container {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .name-row, .address-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .half-width-input, .third-width-input {
+        width: 100%;
+    }
+}
+
+/* Anime-inspired animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-section {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.form-section:nth-child(1) { animation-delay: 0.1s; }
+.form-section:nth-child(2) { animation-delay: 0.2s; }
+.form-section:nth-child(3) { animation-delay: 0.3s; }
+.form-section:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+
+</head>
+<body>
+
+    <!-- Sales Announcement Bar -->
+<div class="sales-bar">
+  Unlock joy with extra discount on eGift card <a href="New-Arrivals.html">shop now</a>
+</div>
+
+<!-- Header Section -->
+<header class="main-header">
+  <div class="logo">
+      <img src="jewell_lg2-removebg-preview.png" alt="Jewelry Logo" class="logo-img">
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="Home.html">HOME</a></li>
+      <li><a href="New-Arrivals.html">NEW ARRIVALS</a></li>
+      <li><a href="Categories.html">CATEGORIES</a></li>
+      <li><a href="Bridal.html">BRIDAL</a></li>
+      <li><a href="Craft.html">CRAFT</a></li>
+      <li><a href="Contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div class="search-user">
+    <input type="text" placeholder="Search">
+    <button class="search-btn">&#128269;</button>
+    <span class="user-icon">&#9679;</span>
+  </div>
+</header>
+
+    <div class="payment-container">
+        <div class="payment-header">
+            <h2>Payment</h2>
+            <div class="progress-line">
+                <div class="progress-dot active"></div>
+            </div>
+        </div>
+
+        <form class="payment-form">
+            <!-- Contact Section -->
+            <div class="form-section">
+                <h3>Contact</h3>
+                <input type="text" placeholder="Email Or Phone Number" class="full-width-input">
+            </div>
+
+            <!-- Delivery Section -->
+            <div class="form-section">
+                <h3>Delivery</h3>
+                <input type="text" placeholder="Country/Region" class="full-width-input">
+                
+                <div class="name-row">
+                    <input type="text" placeholder="First Name" class="half-width-input">
+                    <input type="text" placeholder="Last Name" class="half-width-input">
+                </div>
+                
+                <input type="text" placeholder="Address" class="full-width-input">
+                <input type="text" placeholder="Apartment" class="full-width-input">
+                
+                <div class="address-row">
+                    <input type="text" placeholder="City" class="third-width-input">
+                    <input type="text" placeholder="State" class="third-width-input">
+                    <input type="text" placeholder="Pin" class="third-width-input">
+                </div>
+                
+                <input type="text" placeholder="Phone" class="full-width-input">
+            </div>
+
+            <!-- Shipping Address Section -->
+            <div class="form-section">
+                <h3>Shipping Address</h3>
+                <input type="text" placeholder="Enter Your Shipping Address To View Available Shipping Method" class="shipping-input">
+            </div>
+
+            <!-- Payment Section -->
+            <div class="form-section">
+                <h3>Payment</h3>
+                <p class="security-text">All Transactions Are Secure And Encrypted.</p>
+                
+                <div class="payment-options">
+                    <div class="payment-option selected">
+                        <input type="radio" name="payment" id="phonepay" checked>
+                        <label for="phonepay">Phonepay Payment Gateway(Gpay,Cards & Netbanking)</label>
+                        <div class="payment-icons">
+                            <img src="upi_logo_icon_169316.png" alt="PhonePay">
+                            <img src="visa.png" alt="Visa">
+                            <img src="rupay.png" alt="PayPal">
+                        </div>
+                    </div>
+                    
+                    <div class="payment-option">
+                        <input type="radio" name="payment" id="netbanking">
+                        <label for="netbanking">Netbanking/Upi Payment</label>
+                    </div>
+                    
+                    <div class="payment-option">
+                        <input type="radio" name="payment" id="credit">
+                        <label for="credit">Credit/Debit</label>
+                    </div>
+                    
+                    <div class="payment-option">
+                        <input type="radio" name="payment" id="cash">
+                        <label for="cash">Cash On Delivery</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="pay-now-btn">Pay Now</button>
+            </div>
+        </form>
+    </div>
+
+
+
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="jewell_lg2-removebg-preview.png">
+            <div class="footer-icons-row">
+        <span class="footer-icon"><i class="fa fa-shield"></i></span>
+        <span class="footer-secure-text">100% SECURED<br>PAYMENT GATEWAY</span>
+        <span class="footer-icon"><i class="fa fa-globe"></i></span>
+        <span class="footer-intl-text">INTERNATIONAL<br>DELIVERY</span>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="footer-links">
+      <div>
+        <div class="footer-heading">ONLINE SHOPPING</div>
+        <a href="Home.html">Home</a>
+        <a href="New-Arrivals.html">New Arrivals</a>
+        <a href="cartt.png">Categories</a>
+        <a href="Bridal.html">Bridal</a>
+        <a href="Craft.html">Craft</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div>
+        <div class="footer-heading">USEFUL LINKS</div>
+        <a href="#">T&C</a>
+        <a href="Cart.html">Shipping & Delivery</a>
+        <a href="#">Cancellation</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Return / Refunds</a>
+        <a href="Payment.html">Payments</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-heading">CONTACT US</div>
+      <div class="footer-contact-item">
+        <i class="fa fa-map-marker"></i> Manek Ratna<br>
+        3rd Floor, Block No. 304,<br>
+        Ryan Arcade, Zaveri Road, Malad (West),<br>
+        Maharashtra, Mumbai, Pincode: 400064
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-phone"></i> +91 8974388031
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-envelope"></i> info@manekratna.com
+      </div>
+      <div class="footer-social-row">
+        <span class="footer-social-label">Keep In Touch</span>
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <hr>
+    <div class="footer-bottom-text">
+      &copy; 2021-2025 www.Manekratna.Com All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for icons (include in <head> of your HTML) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">

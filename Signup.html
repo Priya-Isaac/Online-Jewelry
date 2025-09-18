@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry- online</title>
+    <link rel="stylesheet" href="Jewel-style.css">
+    <link script src="Jewel-script.js"></script>
+    <style>
+      body {
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.signup-container {
+  max-width: 350px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.already-member {
+  margin-bottom: 18px;
+  font-size: 1rem;
+}
+
+.login-link {
+  color: #3A3A6D;
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+label {
+  text-align: left;
+  font-size: 0.98rem;
+  margin-top: 14px;
+  margin-bottom: 3px;
+}
+
+input[type="email"], input[type="password"] {
+  padding: 7px 8px;
+  border: none;
+  border-bottom: 1px solid #444;
+  background: transparent;
+  font-size: 1rem;
+  margin-bottom: 3px;
+  outline: none;
+}
+
+.captcha-box {
+  display: flex;
+  align-items: center;
+  background: #f8bcbc;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin: 18px 0 17px 0;
+}
+
+.captcha-box input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 9px;
+}
+
+.captcha-box label {
+  font-size: 1rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+.signup-btn {
+  background: #b71111;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  font-size: 1rem;
+  border-radius: 3px;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 24px 0 12px 0;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider p {
+  margin: 0 8px;
+  font-size: 0.97rem;
+  color: #222;
+}
+
+.social-signup {
+  margin-top: 10px;
+}
+
+.social-signup button {
+  background: none;
+  border: none;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Sales Announcement Bar -->
+<div class="sales-bar">
+  Unlock joy with extra discount on eGift card <a href="New-Arrivals.html">shop now</a>
+</div>
+
+<!-- Header Section -->
+<header class="main-header">
+  <div class="logo">
+      <img src="jewell_lg2-removebg-preview.png" alt="Jewelry Logo" class="logo-img">
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="Home.html">HOME</a></li>
+      <li><a href="New-Arrivals.html">NEW ARRIVALS</a></li>
+      <li><a href="Categories.html">CATEGORIES</a></li>
+      <li><a href="Bridal.html">BRIDAL</a></li>
+      <li><a href="Craft.html">CRAFT</a></li>
+      <li><a href="Contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div class="search-user">
+    <input type="text" placeholder="Search">
+    <button class="search-btn">&#128269;</button>
+    <span class="user-icon">&#9679;</span>
+  </div>
+</header>
+
+
+
+<div class="signup-container">
+  <h2>Sign Up</h2>
+  <div class="already-member">
+    Already A Member? <a href="Log-In.html" class="login-link">Log In</a>
+  </div>
+  <form>
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+    
+    <label for="password">Password</label>
+    <input type="password" id="password" required>
+    
+    <div class="captcha-box">
+      <input type="checkbox" id="captcha" required>
+      <label for="captcha">I'm not a robot</label>
+    </div>
+    
+    <button type="submit" class="signup-btn">Sign Up</button>
+  </form>
+  <div class="divider">
+    <span></span>
+    <p>or sign up with</p>
+    <span></span>
+  </div>
+  <div class="social-signup">
+    <button class="google-btn" type="button">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" class="icon">
+    </button>
+    <button class="facebook-btn" type="button">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" class="icon">
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="jewell_lg2-removebg-preview.png">
+            <div class="footer-icons-row">
+        <span class="footer-icon"><i class="fa fa-shield"></i></span>
+        <span class="footer-secure-text">100% SECURED<br>PAYMENT GATEWAY</span>
+        <span class="footer-icon"><i class="fa fa-globe"></i></span>
+        <span class="footer-intl-text">INTERNATIONAL<br>DELIVERY</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <div class="footer-heading">ONLINE SHOPPING</div>
+        <a href="Home.html">Home</a>
+        <a href="New-Arrivals.html">New Arrivals</a>
+        <a href="cartt.png">Categories</a>
+        <a href="Bridal.html">Bridal</a>
+        <a href="Craft.html">Craft</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div>
+        <div class="footer-heading">USEFUL LINKS</div>
+        <a href="#">T&C</a>
+        <a href="Cart.html">Shipping & Delivery</a>
+        <a href="#">Cancellation</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Return / Refunds</a>
+        <a href="Payment.html">Payments</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-heading">CONTACT US</div>
+      <div class="footer-contact-item">
+        <i class="fa fa-map-marker"></i> Manek Ratna<br>
+        3rd Floor, Block No. 304,<br>
+        Ryan Arcade, Zaveri Road, Malad (West),<br>
+        Maharashtra, Mumbai, Pincode: 400064
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-phone"></i> +91 8974388031
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-envelope"></i> info@manekratna.com
+      </div>
+      <div class="footer-social-row">
+        <span class="footer-social-label">Keep In Touch</span>
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <hr>
+    <div class="footer-bottom-text">
+      &copy; 2021-2025 www.Manekratna.Com All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for icons (include in <head> of your HTML) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">

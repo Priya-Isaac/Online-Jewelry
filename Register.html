@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry- online</title>
+    <link rel="stylesheet" href="Jewel-style.css">
+    <link script src="Jewel-script.js"></script>
+    <style>
+      .form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px 16px 0 16px;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.form-container h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+hr {
+  margin: 0 0 24px 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #e1e1e1;
+  font-size: 1em;
+  color: #333;
+  outline: none;
+}
+
+.two-col {
+  flex: 1;
+}
+
+.message-area {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.attachments {
+  margin-bottom: 12px;
+  font-size: 0.98em;
+}
+
+input[type="file"] {
+  margin-right: 16px;
+}
+
+.captcha-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #bababa;
+}
+
+.submit-btn {
+  background: #e1e1e1;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 32px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.submit-btn:hover {
+  background: #ea0606c2; 
+}   
+ 
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Sales Announcement Bar -->
+<div class="sales-bar">
+  Unlock joy with extra discount on eGift card <a href="New-Arrivals.html">shop now</a>
+</div>
+
+<!-- Header Section -->
+<header class="main-header">
+  <div class="logo">
+      <img src="jewell_lg2-removebg-preview.png" alt="Jewelry Logo" class="logo-img">
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="Home.html">HOME</a></li>
+      <li><a href="New-Arrivals.html">NEW ARRIVALS</a></li>
+      <li><a href="Categories.html">CATEGORIES</a></li>
+      <li><a href="Bridal.html">BRIDAL</a></li>
+      <li><a href="Craft.html">CRAFT</a></li>
+      <li><a href="Contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div class="search-user">
+    <input type="text" placeholder="Search">
+    <button class="search-btn">&#128269;</button>
+    <span class="user-icon">&#9679;</span>
+  </div>
+</header>
+
+<div class="form-container">
+  <h3>Tell us about you…</h3>
+  <hr>
+  <form>
+    <div class="form-row">
+      <input type="text" placeholder="First Name" class="form-input two-col" required>
+      <input type="text" placeholder="Last Name" class="form-input two-col" required>
+    </div>
+    <input type="email" placeholder="Email" class="form-input" required>
+    <input type="tel" placeholder="Mobile" class="form-input" required>
+    <input type="text" placeholder="Subject" class="form-input" required>
+    <textarea placeholder="Message" class="form-input message-area" rows="4"></textarea>
+    <div class="attachments">
+      <label>Attachments if any</label>
+      <input type="file">
+    </div>
+    <div class="captcha-row">
+      <input type="checkbox" id="robot-check">
+      <label for="robot-check">I am not a robot .</label>
+    </div>
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>
+
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="jewell_lg2-removebg-preview.png">
+            <div class="footer-icons-row">
+        <span class="footer-icon"><i class="fa fa-shield"></i></span>
+        <span class="footer-secure-text">100% SECURED<br>PAYMENT GATEWAY</span>
+        <span class="footer-icon"><i class="fa fa-globe"></i></span>
+        <span class="footer-intl-text">INTERNATIONAL<br>DELIVERY</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <div class="footer-heading">ONLINE SHOPPING</div>
+        <a href="Home.html">Home</a>
+        <a href="New-Arrivals.html">New Arrivals</a>
+        <a href="cartt.png">Categories</a>
+        <a href="Bridal.html">Bridal</a>
+        <a href="Craft.html">Craft</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div>
+        <div class="footer-heading">USEFUL LINKS</div>
+        <a href="#">T&C</a>
+        <a href="Cart.html">Shipping & Delivery</a>
+        <a href="#">Cancellation</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Return / Refunds</a>
+        <a href="Payment.html">Payments</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-heading">CONTACT US</div>
+      <div class="footer-contact-item">
+        <i class="fa fa-map-marker"></i> Manek Ratna<br>
+        3rd Floor, Block No. 304,<br>
+        Ryan Arcade, Zaveri Road, Malad (West),<br>
+        Maharashtra, Mumbai, Pincode: 400064
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-phone"></i> +91 8974388031
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-envelope"></i> info@manekratna.com
+      </div>
+      <div class="footer-social-row">
+        <span class="footer-social-label">Keep In Touch</span>
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <hr>
+    <div class="footer-bottom-text">
+      &copy; 2021-2025 www.Manekratna.Com All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for icons (include in <head> of your HTML) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">

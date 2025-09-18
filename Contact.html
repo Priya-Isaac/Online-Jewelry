@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry- online</title>
+    <link rel="stylesheet" href="Jewel-style.css">
+    <link script src="Jewel-script.js"></script>
+    <style>
+body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: #faf7fc;
+    }
+    .contact-banner {
+      background: linear-gradient(90deg, #930e24 70%, #b91c34);
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+    }
+    .contact-banner::before {
+      content: "";
+      background: url('https://png.pngtree.com/back_origin_pic/04/54/29/3c87fba65411478aed5d4f0d9d958262.jpg') no-repeat center;
+      background-size: cover;
+      opacity: 0.4;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+    }
+    .contact-title {
+      position: relative;
+      z-index: 1;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+      text-align: center;
+    }
+    .contact-cards {
+      display: flex;
+      justify-content: center;
+      gap: 38px;
+      margin-top: -60px;
+    }
+    .contact-card {
+      background: white;
+      box-shadow: 0 6px 14px rgba(160,40,60,0.12);
+      border-radius: 14px;
+      width: 300px;
+      text-align: center;
+      padding: 32px 16px 32px 16px;
+      position: relative;
+      z-index: 2;
+    }
+    .contact-icon {
+      font-size: 2.5rem;
+      margin-bottom: 18px;
+      color: #930e24;
+    }
+    .contact-card-title {
+      font-weight: bold;
+      font-size: 1.18rem;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+    .contact-card-desc {
+      color: #363636;
+      font-size: 1.01rem;
+      margin-bottom: 18px;
+    }
+    .contact-btn {
+      background: #c30e23;
+      color: white;
+      border: none;
+      border-radius: 7px;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 7px 22px;
+      cursor: pointer;
+      outline: none;
+      transition: background .18s;
+      letter-spacing: 1.1px;
+    }
+    .contact-btn:hover {
+      background: #930e24;
+    }
+    @media(max-width: 900px) {
+      .contact-cards {
+        flex-direction: column;
+        gap: 28px;
+        margin-top: 0;
+        align-items: center;
+      }
+      .contact-card {
+        width: 90%;
+        max-width: 350px;
+      }
+    }
+    .contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  background: #fff;
+  padding: 40px 0;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.contact-info {
+  width: 475px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  padding: 32px;
+  margin-right: 8px;
+}
+
+.contact-info h2 {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.office-card {
+  margin-top: 24px;
+}
+
+.office-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.office-card hr {
+  border: none;
+  border-top: 1px solid #bdbdbd;
+  margin-bottom: 16px;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.info-icon {
+  font-size: 1.3rem;
+  min-width: 32px;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+.contact-map img {
+  width: 650px;
+  height: 500px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-map img {
+    margin-top: 24px;
+    width: 90vw;
+    height: 200px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+    <!-- Sales Announcement Bar -->
+<div class="sales-bar">
+  Unlock joy with extra discount on eGift card <a href="New-Arrivals.html">shop now</a>
+</div>
+
+<!-- Header Section -->
+<header class="main-header">
+  <div class="logo">
+      <img src="jewell_lg2-removebg-preview.png" alt="Jewelry Logo" class="logo-img">
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="Home.html">HOME</a></li>
+      <li><a href="New-Arrivals.html">NEW ARRIVALS</a></li>
+      <li><a href="Categories.html">CATEGORIES</a></li>
+      <li><a href="Bridal.html">BRIDAL</a></li>
+      <li><a href="Craft.html">CRAFT</a></li>
+      <li><a href="Contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div class="search-user">
+    <input type="text" placeholder="Search">
+    <button class="search-btn">&#128269;</button>
+    <span class="user-icon">&#9679;</span>
+  </div>
+</header>
+   
+  
+  <div class="contact-banner">
+    <div class="contact-title">Contact Us</div>
+  </div>
+  <div class="contact-cards">
+    <div class="contact-card">
+      <div class="contact-icon">
+        <i class="fas fa-question-circle"></i>
+      </div>
+      <div class="contact-card-title">FAQ's</div>
+      <div class="contact-card-desc">
+        Frequently Asked Questions regarding Order, Delivery, Shipping, etc.
+      </div>
+      <button class="contact-btn">CHECK</button>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">
+        <i class="fas fa-store"></i>
+      </div>
+      <div class="contact-card-title">STORE APPOINTMENT</div>
+      <div class="contact-card-desc">
+        Visit store and checkout our latest collection.<br>
+        <small>*Minimum order amount will be Rs. 15,000 INR</small>
+      </div>
+      <button class="contact-btn">BOOK</button>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">
+        <i class="fas fa-video"></i>
+      </div>
+      <div class="contact-card-title">VIDEO PURCHASE APPOINTMENT</div>
+      <div class="contact-card-desc">
+        Schedule video call to check samples and build trust with us so you can place order online.
+      </div>
+      <button class="contact-btn">BOOK</button>
+    </div>
+  </div>
+
+<div class="contact-section">
+  <div class="contact-info">
+    <h2>CONTACT US</h2>
+    <div class="office-card">
+      <h3>HEAD OFFICE</h3>
+      <hr>
+      <div class="info-row">
+        <span class="info-icon">📍</span>
+        <span>
+          <strong>Address :</strong><br>
+          Manek Ratna<br>
+          3rd Floor, Block No. 304,<br>
+          Ryna Arcade, Zakeria Road, Malad (West),<br>
+          Maharashtra, Mumbai, Pincode: 400064
+        </span>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">📞</span>
+        <span>
+          <strong>Phone :</strong><br>
+          +91-9930955640 | +91-9820212293
+        </span>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">✉️</span>
+        <span>
+          <strong>Email :</strong><br>
+          Info@Manekratna.Com
+        </span>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">🌐</span>
+        <span>
+          <strong>Website :</strong><br>
+          www.Manekratna.Com
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="contact-map">
+    <!-- Replace src below with your map or relevant image -->
+    <img src="map.jpg" alt="Office Map" />
+  </div>
+</div>
+
+  
+
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="jewell_lg2-removebg-preview.png">
+            <div class="footer-icons-row">
+        <span class="footer-icon"><i class="fa fa-shield"></i></span>
+        <span class="footer-secure-text">100% SECURED<br>PAYMENT GATEWAY</span>
+        <span class="footer-icon"><i class="fa fa-globe"></i></span>
+        <span class="footer-intl-text">INTERNATIONAL<br>DELIVERY</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <div class="footer-heading">ONLINE SHOPPING</div>
+        <a href="Home.html">Home</a>
+        <a href="New-Arrivals.html">New Arrivals</a>
+        <a href="cartt.png">Categories</a>
+        <a href="Bridal.html">Bridal</a>
+        <a href="Craft.html">Craft</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div>
+        <div class="footer-heading">USEFUL LINKS</div>
+        <a href="#">T&C</a>
+        <a href="Cart.html">Shipping & Delivery</a>
+        <a href="#">Cancellation</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Return / Refunds</a>
+        <a href="Payment.html">Payments</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-heading">CONTACT US</div>
+      <div class="footer-contact-item">
+        <i class="fa fa-map-marker"></i> Manek Ratna<br>
+        3rd Floor, Block No. 304,<br>
+        Ryan Arcade, Zaveri Road, Malad (West),<br>
+        Maharashtra, Mumbai, Pincode: 400064
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-phone"></i> +91 8974388031
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-envelope"></i> info@manekratna.com
+      </div>
+      <div class="footer-social-row">
+        <span class="footer-social-label">Keep In Touch</span>
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <hr>
+    <div class="footer-bottom-text">
+      &copy; 2021-2025 www.Manekratna.Com All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for icons (include in <head> of your HTML) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">

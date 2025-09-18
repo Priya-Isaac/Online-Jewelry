@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry- online</title>
+    <link rel="stylesheet" href="Jewel-style.css">
+    <link script src="Jewel-script.js"></script>
+    <style>
+      .cart-container {
+  background: #fab8b8;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.remove-all {
+  color: #a43a3a;
+  text-decoration: underline;
+  font-size: 0.98em;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 0;
+}
+
+.cart-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  background: #fff;
+}
+
+.cart-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-title {
+  font-size: 1.12em;
+  font-weight: 600;
+}
+
+.quantity-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-btn {
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.qty-display {
+  display: inline-block;
+  min-width: 26px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.remove-link {
+  color: #e04d4d;
+  font-size: 1em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.buy-btn {
+  background: #c31717;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 16px;
+  font-size: 1em;
+  margin-top: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.cart-price {
+  font-size: 1.1em;
+  font-weight: 600;
+  min-width: 85px;
+  text-align: right;
+}
+
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 4px 0 4px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+    </style>
+
+</head>
+<body>
+
+    <!-- Sales Announcement Bar -->
+<div class="sales-bar">
+  Unlock joy with extra discount on eGift card <a href="New-Arrivals.html">shop now</a>
+</div>
+
+<!-- Header Section -->
+<header class="main-header">
+  <div class="logo">
+      <img src="jewell_lg2-removebg-preview.png" alt="Jewelry Logo" class="logo-img">
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="Home.html">HOME</a></li>
+      <li><a href="New-Arrivals.html">NEW ARRIVALS</a></li>
+      <li><a href="Categories.html">CATEGORIES</a></li>
+      <li><a href="Bridal.html">BRIDAL</a></li>
+      <li><a href="Craft.html">CRAFT</a></li>
+      <li><a href="Contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div class="search-user">
+    <input type="text" placeholder="Search">
+    <button class="search-btn">&#128269;</button>
+    <span class="user-icon">&#9679;</span>
+  </div>
+</header>
+
+<div class="cart-container">
+  <div class="cart-header">
+    <span>Shopping Cart</span>
+    <a href="#" class="remove-all">Remove all</a>
+  </div>
+  <hr />
+  <div class="cart-item">
+    <img src="TEMPLE-COMBO-NECKLACE-SET-NS-17092GO-580-OM-12-QTY-2.jpg" alt="Bridal Jewellery Set" class="cart-img">
+    <div class="cart-details">
+      <div class="cart-title">Bridal Jewellery Set</div>
+      <div class="quantity-group">
+        <button class="qty-btn">+</button>
+        <span class="qty-display">10</span>
+        <button class="qty-btn">-</button>
+      </div>
+      <div>
+        <a href="#" class="remove-link">Remove</a>
+      </div>
+      <a href="Payment.html" class="buy-btn">Buy Now</a>
+    </div>
+    <div class="cart-price">Rs.75000</div>
+  </div>
+  <hr />
+  <div class="cart-item">
+    <img src="ANTIQUE-EARRING-ER-12057RG-107-DKG.jpg" alt="Antique Bangles" class="cart-img">
+    <div class="cart-details">
+      <div class="cart-title">Antique Earrings</div>
+      <div class="quantity-group">
+        <button class="qty-btn">+</button>
+        <span class="qty-display">10</span>
+        <button class="qty-btn">-</button>
+      </div>
+      <div>
+        <a href="#" class="remove-link">Remove</a>
+      </div>
+      <a href="Payment.html" class="buy-btn">Buy Now</a>
+    </div>
+    <div class="cart-price">Rs.75000</div>
+  </div>
+  <hr />
+  <div class="cart-footer">
+    <span>Sub Total</span>
+    <span>Rs.150000</span>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="jewell_lg2-removebg-preview.png">
+            <div class="footer-icons-row">
+        <span class="footer-icon"><i class="fa fa-shield"></i></span>
+        <span class="footer-secure-text">100% SECURED<br>PAYMENT GATEWAY</span>
+        <span class="footer-icon"><i class="fa fa-globe"></i></span>
+        <span class="footer-intl-text">INTERNATIONAL<br>DELIVERY</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <div class="footer-heading">ONLINE SHOPPING</div>
+        <a href="Home.html">Home</a>
+        <a href="New-Arrivals.html">New Arrivals</a>
+        <a href="cartt.png">Categories</a>
+        <a href="Bridal.html">Bridal</a>
+        <a href="Craft.html">Craft</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div>
+        <div class="footer-heading">USEFUL LINKS</div>
+        <a href="#">T&C</a>
+        <a href="Cart.html">Shipping & Delivery</a>
+        <a href="#">Cancellation</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Return / Refunds</a>
+        <a href="Payment.html">Payments</a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-heading">CONTACT US</div>
+      <div class="footer-contact-item">
+        <i class="fa fa-map-marker"></i> Manek Ratna<br>
+        3rd Floor, Block No. 304,<br>
+        Ryan Arcade, Zaveri Road, Malad (West),<br>
+        Maharashtra, Mumbai, Pincode: 400064
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-phone"></i> +91 8974388031
+      </div>
+      <div class="footer-contact-item">
+        <i class="fa fa-envelope"></i> info@manekratna.com
+      </div>
+      <div class="footer-social-row">
+        <span class="footer-social-label">Keep In Touch</span>
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <hr>
+    <div class="footer-bottom-text">
+      &copy; 2021-2025 www.Manekratna.Com All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome CDN for icons (include in <head> of your HTML) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
